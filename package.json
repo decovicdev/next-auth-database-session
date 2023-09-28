@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "prisma": {
+    "schema": "packages/database/prisma/schema.prisma",
+    "seed": "tsx packages/database/src/seed.ts"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "db:migrate:deploy": "turbo run db:migrate:deploy",
+    "db:push": "turbo run db:push",
+    "dev": "turbo run dev",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "generate": "turbo run generate",
+    "lint": "turbo run lint",
+    "studio": "turbo run studio"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "tsx": "^3.13.0",
+    "turbo": "^1.10.14"
+  },
+  "packageManager": "pnpm@8.6.11"
+}

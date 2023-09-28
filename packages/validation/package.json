@@ -1,0 +1,16 @@
+{
+  "name": "validation",
+  "version": "1.0.0",
+  "files": [
+    "index.ts"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.9",
+    "tsconfig": "workspace:*",
+    "typescript": "^5.2.2"
+  }
+}
