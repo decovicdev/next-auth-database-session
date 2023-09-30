@@ -3,13 +3,14 @@ import { Spacer, VStack, Box } from "@chakra-ui/react";
 import { AuthBgClipPath } from "./ImageClipPath";
 import { Body1, Heading } from "./typography";
 import Stack from "./Stack";
+import { PropsWithChildren } from "react";
 
 interface AuthLayoutProps {
   title: string;
   description: string;
 }
 
-const AuthLayout: React.FC<AuthLayoutProps> = (props) => {
+const AuthLayout: React.FC<PropsWithChildren<AuthLayoutProps>> = (props) => {
   const { description, title, children } = props;
   return (
     <Stack gap="0" spacing="0">
