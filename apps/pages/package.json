@@ -30,7 +30,7 @@
     "@types/bcrypt": "^5.0.0",
     "@types/node": "20.7.1",
     "@types/react": "18.2.23",
-    "eslint-config-next": "^13.5.3",
+    "config": "*",
     "tsconfig": "workspace:*",
     "typescript": "5.2.2"
   }

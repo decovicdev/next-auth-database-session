@@ -18,6 +18,7 @@ This turborepo includes the following packages/apps:
 
 - `app`: a [Next.js](https://nextjs.org/) app (app directory)
 - `pages`: a [Next.js](https://nextjs.org/) app (pages directory)
+- `config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `validation`: `zod` schemas to validate and parse user input
 - `database`: [Prisma](https://prisma.io/) ORM wrapper to manage & access your database
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
