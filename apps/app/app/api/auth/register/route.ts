@@ -1,4 +1,5 @@
 import { registerSchema } from "validation";
+import { NextResponse } from "next/server";
 import { prisma } from "database";
 import bcrypt from "bcrypt";
 
@@ -9,9 +10,9 @@ export async function POST(request: Request) {
     const result = await registerSchema.safeParseAsync(data);
 
     if (!result.success) {
-      return {
+      return NextResponse.json({
         error: result.error.errors[0].message,
-      };
+      });
     }
 
     const { email, password, firstName, lastName } = result.data;
@@ -23,9 +24,9 @@ export async function POST(request: Request) {
     });
 
     if (user) {
-      return {
+      return NextResponse.json({
         error: "User already exist with this email",
-      };
+      });
     }
 
     const passwordHash = await bcrypt.hash(password, 10);
@@ -49,12 +50,12 @@ export async function POST(request: Request) {
       });
     });
 
-    return {
+    return NextResponse.json({
       message: "User created successfully.",
-    };
+    });
   } catch (error) {
-    return {
+    return NextResponse.json({
       error: "System error. Please contact support",
-    };
+    });
   }
 }
