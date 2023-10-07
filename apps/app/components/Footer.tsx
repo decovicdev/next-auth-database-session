@@ -5,8 +5,9 @@ import { Divider, Link, VStack, Wrap, WrapItem } from "@chakra-ui/react";
 import { Body1, Title } from "./typography";
 import Container from "./Container";
 import Logo from "./Logo";
+import { usePathname } from "next/navigation";
 
-const footerLinks = [
+const footer_links = [
   {
     label: "About",
     links: ["About Us", "Careers", "Press", "Terms & Privacy"],
@@ -16,8 +17,14 @@ const footerLinks = [
     links: ["Help Center", "Contact Us", "Report a Problem", "FAQ"],
   },
 ];
+const auth_routes = ["/login", "/register"];
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isAuthPage = auth_routes.includes(pathname);
+
+  if (isAuthPage) return null;
+
   return (
     <footer>
       <Container py="20">
@@ -33,7 +40,7 @@ export default function Footer() {
                 </Body1>
               </VStack>
             </WrapItem>
-            {footerLinks.map((footerLink) => (
+            {footer_links.map((footerLink) => (
               <WrapItem key={footerLink.label}>
                 <VStack align="flex-start">
                   <Title>{footerLink.label}</Title>

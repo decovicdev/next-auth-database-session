@@ -10,12 +10,9 @@ import { poppins } from "@/constants/font";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const auth_routes = ["/login", "/register"] as const;
-
 export default async function RootLayout({ children }: PropsWithChildren<{}>) {
   const session = await getServerSession();
   const referer = headers().get("referer");
-  const isAuthPage = auth_routes.some((route) => referer?.includes(route));
 
   return (
     <html lang="en">
@@ -53,7 +50,7 @@ export default async function RootLayout({ children }: PropsWithChildren<{}>) {
           <ChakraProvider>
             <Header />
             <main>{children}</main>
-            {!isAuthPage && <Footer />}
+            <Footer />
           </ChakraProvider>
         </SessionProvider>
       </body>
