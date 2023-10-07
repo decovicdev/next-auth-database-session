@@ -5,7 +5,7 @@
     "seed": "tsx packages/database/src/seed.ts"
   },
   "scripts": {
-    "build": "dotenv -- turbo run build",
+    "build": "turbo run build",
     "db:migrate:deploy": "dotenv -- turbo run db:migrate:deploy",
     "db:push": "dotenv -- turbo run db:push",
     "dev": "dotenv -- turbo run dev",
