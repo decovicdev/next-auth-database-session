@@ -1,8 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import { registerSchema } from "validation";
 import { prisma } from "database";
 import bcrypt from "bcrypt";
-
-import { registerSchema } from "@/validation";
 
 export default async function handler(
   req: NextApiRequest,
@@ -12,7 +11,7 @@ export default async function handler(
     const result = await registerSchema.safeParseAsync(req.body);
 
     if (!result.success) {
-      return res.status(400).json({
+      return res.status(403).json({
         error: result.error.errors[0].message,
       });
     }

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { PropsWithChildren } from "react";
 
 const variants = {
   visible: {
@@ -15,7 +16,10 @@ interface FadeInProps {
   delay?: number;
 }
 
-const FadeIn: React.FC<FadeInProps> = ({ children, delay }) => {
+const FadeIn: React.FC<PropsWithChildren<FadeInProps>> = ({
+  children,
+  delay,
+}) => {
   return (
     <motion.div
       initial="hidden"
