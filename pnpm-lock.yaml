@@ -72,6 +72,9 @@ importers:
         specifier: ^3.22.2
         version: 3.22.2
     devDependencies:
+      '@prisma/nextjs-monorepo-workaround-plugin':
+        specifier: ^5.4.1
+        version: 5.4.1
       '@types/bcrypt':
         specifier: ^5.0.0
         version: 5.0.0
@@ -83,7 +86,7 @@ importers:
         version: 18.2.23
       config:
         specifier: '*'
-        version: link:../../packages/config
+        version: 3.3.9
       tsconfig:
         specifier: workspace:*
         version: link:../../packages/tsconfig
@@ -142,6 +145,9 @@ importers:
         specifier: ^3.22.2
         version: 3.22.2
     devDependencies:
+      '@prisma/nextjs-monorepo-workaround-plugin':
+        specifier: ^5.4.1
+        version: 5.4.1
       '@types/bcrypt':
         specifier: ^5.0.0
         version: 5.0.0
@@ -153,7 +159,7 @@ importers:
         version: 18.2.23
       config:
         specifier: '*'
-        version: link:../../packages/config
+        version: 3.3.9
       tsconfig:
         specifier: workspace:*
         version: link:../../packages/tsconfig
@@ -2038,6 +2044,10 @@ packages:
     resolution: {integrity: sha512-dT7FOLUCdZmq+AunLqB1Iz+ZH/IIS1Fz2THmKZQ6aFONrQD/BQ5ecJ7g2wGS2OgyUFf4OaLam6/bxmgdOBDqig==}
     requiresBuild: true
 
+  /@prisma/nextjs-monorepo-workaround-plugin@5.4.1:
+    resolution: {integrity: sha512-VCs2FNQTezqDHnaZPmfrcoY8VQhuIhb3xIwOoSekk2C2koLZxtMcODJucran2ePyqa9K/PDdBlv2EGhvl9qTkQ==}
+    dev: true
+
   /@rushstack/eslint-patch@1.5.0:
     resolution: {integrity: sha512-EF3948ckf3f5uPgYbQ6GhyA56Dmv8yg0+ir+BroRjwdxyZJsekhZzawOecC2rOTPCz173t7ZcR1HHZu0dZgOCw==}
     dev: false
@@ -2531,6 +2541,13 @@ packages:
 
   /concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
+
+  /config@3.3.9:
+    resolution: {integrity: sha512-G17nfe+cY7kR0wVpc49NCYvNtelm/pPy8czHoFkAgtV1lkmcp7DHtWCdDu+C9Z7gb2WVqa9Tm3uF9aKaPbCfhg==}
+    engines: {node: '>= 10.0.0'}
+    dependencies:
+      json5: 2.2.3
+    dev: true
 
   /console-control-strings@1.1.0:
     resolution: {integrity: sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==}
@@ -3814,6 +3831,12 @@ packages:
     dependencies:
       minimist: 1.2.8
     dev: false
+
+  /json5@2.2.3:
+    resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
+    engines: {node: '>=6'}
+    hasBin: true
+    dev: true
 
   /jsx-ast-utils@3.3.5:
     resolution: {integrity: sha512-ZZow9HBI5O6EPgSJLUb8n2NKgmVWTwCvHGwFuJlMjvLFqlGG6pjirPhtdsseaLZjSibD8eegzmYpUZwoIlj2cQ==}

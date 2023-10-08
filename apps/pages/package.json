@@ -27,6 +27,7 @@
     "zod": "^3.22.2"
   },
   "devDependencies": {
+    "@prisma/nextjs-monorepo-workaround-plugin": "^5.4.1",
     "@types/bcrypt": "^5.0.0",
     "@types/node": "20.7.1",
     "@types/react": "18.2.23",
