@@ -5,7 +5,7 @@ import bcrypt from "bcrypt";
 
 export async function POST(request: Request) {
   try {
-    const data = request.json();
+    const data = await request.json();
 
     const result = await registerSchema.safeParseAsync(data);
 
