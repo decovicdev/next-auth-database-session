@@ -62,5 +62,18 @@ export async function registerAction(data: z.infer<typeof registerSchema>) {
 }
 
 export async function loginAction(data: z.infer<typeof loginSchema>) {
-  return await signIn("credentials", data);
+  try {
+    await signIn("credentials", {
+      ...data,
+      redirect: false,
+    });
+
+    return {
+      error: false,
+    };
+  } catch (error) {
+    return {
+      error: error.message,
+    };
+  }
 }

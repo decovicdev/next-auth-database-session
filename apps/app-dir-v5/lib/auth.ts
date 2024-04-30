@@ -126,6 +126,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth(() => {
       signIn: "/login",
     },
     debug: process.env.NODE_ENV === "development",
+    trustHost: true,
     events: {
       async signOut(message) {
         if ("session" in message && message.session?.sessionToken) {

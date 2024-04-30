@@ -32,7 +32,14 @@ const LoginForm: React.FC = () => {
 
   const onSubmit = handleSubmit(async (data) => {
     try {
-      await loginAction(data);
+      const { error } = await loginAction(data);
+
+      if (error) {
+        setError("root", {
+          message: error,
+        });
+        return;
+      }
 
       router.push("/");
     } catch (error: any) {
