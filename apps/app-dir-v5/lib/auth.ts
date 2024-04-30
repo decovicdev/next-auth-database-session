@@ -98,20 +98,19 @@ export const { handlers, signIn, signOut, auth } = NextAuth(() => {
 
     callbacks: {
       async jwt({ token, user, account }) {
-        if (account?.provider !== "credentials") {
-          return token;
+        if (account?.provider === "credentials") {
+          const expires = new Date(Date.now() + 60 * 60 * 24 * 30 * 1000);
+          const sessionToken = randomUUID();
+
+          const session = await adapter.createSession!({
+            userId: user.id!,
+            sessionToken,
+            expires,
+          });
+
+          token.sessionId = session.sessionToken;
         }
 
-        const expires = new Date(Date.now() + 60 * 60 * 24 * 30 * 1000);
-        const sessionToken = randomUUID();
-
-        const session = await adapter.createSession!({
-          userId: user.id || sessionToken,
-          sessionToken,
-          expires,
-        });
-
-        token.sessionId = session.sessionToken;
         return token;
       },
     },
@@ -124,6 +123,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth(() => {
     pages: {
       error: "/login",
       signIn: "/login",
+      newUser: "/",
     },
     debug: process.env.NODE_ENV === "development",
     trustHost: true,
