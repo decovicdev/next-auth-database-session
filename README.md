@@ -16,8 +16,9 @@ This turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
-- `app`: a [Next.js](https://nextjs.org/) app (app directory)
-- `pages`: a [Next.js](https://nextjs.org/) app (pages directory)
+- `app-dir-v4`: a [Next.js](https://nextjs.org/) app (app directory) + [NextAuth:v4](https://authjs.dev/)
+- `app-dir-v5`: a [Next.js](https://nextjs.org/) app (app directory) + [NextAuth:v5](https://authjs.dev/)
+- `pages-dir-v4`: a [Next.js](https://nextjs.org/) app (pages directory) + [NextAuth:v4](https://authjs.dev/)
 - `config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `validation`: `zod` schemas to validate and parse user input
 - `database`: [Prisma](https://prisma.io/) ORM wrapper to manage & access your database
@@ -92,9 +93,7 @@ pnpm run dev
 
 Learn more about the power of Turborepo:
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+- [Next.js](https://nextjs.org/)
+- [NextAuth](https://authjs.dev/)
+- [Turborepo](https://turbo.build/repo/docs/)
+- [Prisma](https://prisma.io/)
