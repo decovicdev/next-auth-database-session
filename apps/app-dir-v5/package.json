@@ -1,0 +1,38 @@
+{
+  "name": "app-dir-v5",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3002",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@auth/prisma-adapter": "^2.0.0",
+    "@chakra-ui/next-js": "^2.1.5",
+    "@chakra-ui/react": "^2.8.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@hookform/resolvers": "^3.3.1",
+    "bcrypt": "^5.1.1",
+    "database": "workspace:*",
+    "framer-motion": "^10.16.4",
+    "next": "^14.2.3",
+    "next-auth": "5.0.0-beta.17",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.46.2",
+    "validation": "workspace:*",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@prisma/nextjs-monorepo-workaround-plugin": "^5.4.1",
+    "@types/bcrypt": "^5.0.0",
+    "@types/node": "20.7.1",
+    "@types/react": "18.2.23",
+    "config": "*",
+    "tsconfig": "workspace:*",
+    "typescript": "5.2.2"
+  }
+}
