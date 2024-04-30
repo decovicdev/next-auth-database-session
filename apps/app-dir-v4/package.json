@@ -1,21 +1,21 @@
 {
-  "name": "pages",
+  "name": "app-dir-v4",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 3001",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/next-js": "^2.1.5",
     "@chakra-ui/react": "^2.8.1",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@hookform/resolvers": "^3.3.1",
     "@next-auth/prisma-adapter": "^1.0.7",
     "bcrypt": "^5.1.1",
-    "cookies-next": "^4.0.0",
     "database": "workspace:*",
     "framer-motion": "^10.16.4",
     "next": "^13.5.3",
