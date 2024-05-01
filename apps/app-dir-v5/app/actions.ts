@@ -51,9 +51,7 @@ export async function registerAction(data: z.infer<typeof registerSchema>) {
       });
     });
 
-    return {
-      message: "User created successfully.",
-    };
+    return {};
   } catch (error) {
     return {
       error: "System error. Please contact support",
