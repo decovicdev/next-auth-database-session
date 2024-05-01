@@ -31,7 +31,7 @@ const RegisterForm: React.FC = () => {
 
       if (res.error) {
         setError("root", {
-          message: res.message,
+          message: res.error,
         });
         return;
       }
