@@ -1,6 +1,18 @@
 # Nextjs + NextAuth + Prisma
 
-This is nextjs + next-auth credentials with session example
+This repository combines `Next.js` and `NextAuth.js` with various authentication providers (**Credentials**, **Facebook**, **Google**) and session management for both **App** and **Pages** Routers.
+
+Try demo https://next-auth-database-session-app.vercel.app/
+
+## Features
+- 🧙‍♂️ type safe with TypeScript
+- ⚡ Full-stack React with Next.js (app/pages) routers
+- ⚡ Database with Prisma
+- ⚡ Monorepo with Turborepo
+- 🔐 Authorization using [next-auth](https://next-auth.js.org/) (v4/v5)
+- 🔐 Zod Validation
+- 🎨 ESLint
+
 
 ## Using this example
 
